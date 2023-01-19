@@ -1,0 +1,27 @@
+h1 {
+  font-size: 50px;
+}
+h1 {
+  text-align: center;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.grid-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+<h1 class="center large">Coin Flip</h1>
+.center {
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.large{
+    font-size: 50px;
+}
